@@ -1,0 +1,83 @@
+@import "vars";
+@import "mixin";
+@import "Header";
+@import "Login";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+
+}
+.mainContainer {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 120px);
+  position: relative;
+}
+.mainContent {
+  padding: $defaultPadding;
+  display: flex;
+}
+.productBlock {
+  box-shadow: 0 0 5px $grayColor;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column;
+  margin: 10px;
+  overflow: hidden;
+  & img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.messageBlock {
+  display: flex;
+  box-shadow: 0 0 5px red;
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  min-height: 50px;
+  min-width: 200px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.customForm {
+  box-shadow: 0 0 5px $grayColor;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px 0;
+  &:focus-within {
+    box-shadow: 0 0 5px $accentColor;
+  }
+  &__input {
+    &:focus {
+      outline-color: transparent;
+    }
+    border: none;
+    background: transparent;
+  }
+}
+.customTitle {
+  font-size: 20px;
+  color: $textColor;
+  font-weight: bold;
+}
+.customButton {
+  box-shadow: 0 0 5px $grayColor;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: none;
+  background: $accentColor;
+  color: #fff;
+  outline-color: transparent;
+  cursor: pointer;
+  &:focus {
+    box-shadow: 0 0 10px $accentColor;
+  }
+}

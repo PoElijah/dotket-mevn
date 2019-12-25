@@ -1,0 +1,140 @@
+.mainHeader {
+  height: $headerH;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $defaultPadding;
+  position: relative;
+  &__main {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px $grayColor;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: $textSize;
+    &:focus-within {
+      box-shadow: 0 0 5px $accentColor;
+    }
+    & input {
+      background: transparent;
+      border: none;
+      outline-color: transparent;
+    }
+  }
+}
+.mainLogo {
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  &:first-letter {
+    color: $accentColor;
+  }
+}
+.mainNav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: $accentColor;
+  width: 100%;
+  &__ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    & li {
+      display: flex;
+      height: 100%;
+    }
+  }
+  &__link {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    outline-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
+    &:focus {
+      border-bottom: 2px solid black;
+    }
+    &:hover {
+      box-shadow: inset 0 0 5px $grayColor;
+      background: darken($accentColor, 10%);
+    }
+  }
+}
+.actionBlock {
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 5px $grayColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $textColor;
+  overflow: hidden;
+  & img {
+    width: inherit;
+  }
+}
+.userBlock {
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  box-shadow: 0 0 5px $grayColor;
+  border-radius: 5px;
+  padding: 15px;
+  min-width: 250px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transition: .3s ease-in;
+  transform-origin: right top;
+  background: #fff;
+  &--false {
+    transform: scale(0);
+  }
+  &--true {
+    transform: scale(1);
+  }
+  &__btn {
+    margin-top: 15px;
+  }
+  &__name {
+    margin: 10px 0;
+    font-size: 17px;
+    color: $textColor;
+    text-decoration: none;
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px $accentColor;
+    & img {
+      width: inherit;
+    }
+  }
+}
